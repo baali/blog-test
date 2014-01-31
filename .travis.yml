@@ -1,0 +1,10 @@
+before_install: sudo apt-get install -qq python-lxml
+branches:
+  only: [master]
+env:
+  global: {secure: gb/dE3JzIeJIo5INp8oO0vH/nen2Hqb2ulwI9noPTxLhlbuLVObO3ZS+1i4gFvEfCk4HvQl/8/Aiy7BmEbI2R2MebBUpuOxqXJS/HM9kLInb/c5XX+svzu+mpFd5dNFalb8yLOCCbptWCkK4h/n36ATX39ASE7cfRcPirlZg5HE=}
+install: pip install nikola webassets
+language: python
+python: ['2.7']
+script: bash travis_build_n_deploy.sh
+virtualenv: {system_site_packages: true}
